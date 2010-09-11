@@ -15,14 +15,15 @@ NC='\e[0m' # No Color
    nocolor='\e[0m'
 
 
-source /usr/local/etc/bash_completion.d/git-completion.bash
+source ~/.git-completion.sh
 
 function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-function myip {
+function myip() {
   ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2
 }
 
-export PS1="\n$green\u@\h $blue\W $red\$(parse_git_branch) :$nocolor \$(myip)\n"
+export PS1="\n$green\u@\h $blue\W $red\$(__git_ps1 "%s") :$nocolor \$(myip)\n"
+
