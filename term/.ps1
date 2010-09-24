@@ -25,5 +25,5 @@ function myip() {
   ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2
 }
 
-export PS1="\n$green\u@\h $blue\W $red\$(__git_ps1 "%s") :$nocolor \$(myip)\n"
+export PS1="\n$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor \$(myip)\n"
 

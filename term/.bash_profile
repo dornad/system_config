@@ -37,4 +37,12 @@ export GEM_HOME=~/.gem/ruby/1.8/
 export VERSIONER_PYTHON_PREFER_32_BIT=yes
 
 source ~/.bash_aliases
+
+# Terminal settings and prompt-related scripts
 source ~/.ps1
+
+# If there are other things you want, put them into separate config files 
+# Examples:
+# source ~/.aws_config
+# source ~/.bash_private_aliases
+# source ~/.my_keys
