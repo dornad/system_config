@@ -31,5 +31,6 @@
 	trustExitCode = true
 [diff]
 	tool = diffmerge
+     # external = ~/.opendiff-git.sh$
 [difftool "diffmerge"]
 	cmd = diffmerge $LOCAL $REMOTE
