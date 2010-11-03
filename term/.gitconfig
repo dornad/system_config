@@ -1,6 +1,6 @@
 [user]
-	name = 
-	email = 
+  name = 
+  email = 
 [branch]
 	autosetupmerge = true
 [color]
@@ -25,12 +25,24 @@
   changed = green
   untracked = cyan
 [merge]
-	tool = diffmerge
+  tool = diffmerge
 [mergetool "diffmerge"]
-	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
-	trustExitCode = true
+  cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+  trustExitCode = true
 [diff]
-	tool = diffmerge
-     # external = ~/.opendiff-git.sh$
+  tool = diffmerge
+  # external = ~/.git-opendiff
 [difftool "diffmerge"]
-	cmd = diffmerge $LOCAL $REMOTE
+  cmd = diffmerge $LOCAL $REMOTE
+
+[alias]
+  changes = diff --name-status -r
+  co = checkout
+  st = status
+  lg = log --name-status
+  who = shortlog -s --
+  ci = commit
+  br = branch
+  po = pull origin 
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
