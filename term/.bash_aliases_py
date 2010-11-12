@@ -1,0 +1,5 @@
+#---------- Python related (to fix some OSX goofiness) --------------
+# This one fixes the fact that TickCount() does not respect 64-bit:
+# http://stackoverflow.com/questions/3461983/evt-tickcount-not-found-with-python2-6-on-osx-10-6-3
+export VERSIONER_PYTHON_PREFER_32_BIT=yes
+

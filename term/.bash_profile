@@ -19,7 +19,8 @@ export JAVA_HOME=/Library/Java/Home
 export ROO_OPTS="-Droo.bright=true"
 
 # 512m seems a good value to not run out of java heap space
-export ANT_OPTS="-Xmx512m"
+# Headless is necessary for running ant task so they don't get window server errors
+export ANT_OPTS="-Xmx512m -Djava.awt.headless=true"
 
 #------- Ruby Related -----------------------------------------------
 

@@ -1,0 +1,10 @@
+#------ JAVA-related (and everything using Java) -------
+export JAVA_HOME=/Library/Java/Home
+
+# ROO profile settings for term
+export ROO_OPTS="-Droo.bright=true"
+
+# 256m seems a good value to not run out of java heap space
+export ANT_OPTS="-Xmx512m  -Djava.awt.headless=true"
+# -Xms512M -Xmx512M
+
