@@ -12,38 +12,21 @@
 export SVN_EDITOR="/usr/bin/vim"
 export EDITOR=/usr/bin/vim
 
-#------ JAVA-related (and everything using Java ---------------------
-export JAVA_HOME=/Library/Java/Home
-
-# ROO profile settings for term
-export ROO_OPTS="-Droo.bright=true"
-
-# 512m seems a good value to not run out of java heap space
-# Headless is necessary for running ant task so they don't get window server errors
-export ANT_OPTS="-Xmx512m -Djava.awt.headless=true"
-
-#------- Ruby Related -----------------------------------------------
-
-# Ruby Version Manager (RVM)
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  source "$HOME/.rvm/scripts/rvm";
-fi
-
-# Following is based on whatever your want
-export GEM_HOME=~/.gem/ruby/1.8/
-
-#---------- Python related (to fix some OSX goofiness) --------------
-# This one fixes the fact that TickCount() does not respect 64-bit:
-# http://stackoverflow.com/questions/3461983/evt-tickcount-not-found-with-python2-6-on-osx-10-6-3
-export VERSIONER_PYTHON_PREFER_32_BIT=yes
-
+# General aliases
 source ~/.bash_aliases
 
-# Terminal settings and prompt-related scripts
+# Language-specific configurations
+source ~/.bash_aliases_java
+source ~/.bash_aliases_rb
+source ~/.bash_aliases_py
+
+# Terminal prefs
 source ~/.ps1
 
-# If there are other things you want, put them into separate config files 
-# Examples:
+# Private aliases that don't need to be externalized for git
+# source ~/.bash_aliases_mine
+
+
+# App-specific stuff
 # source ~/.aws_config
-# source ~/.bash_private_aliases
-# source ~/.my_keys
+
