@@ -1,2 +1,8 @@
 Put all the hidden files in this folder into 
 your ~/ folder and then re-launch the terminal
+
+It may also be worthwhile to have all the files in your ~/.bash_files folder
+and have ONLY .bash_profile in the root. That way everything is in
+a single place that you can manage easier.
+To accommodate this, if you have a ~/.bash_files folder, that's where 
+.bash_profile will load all the bash aliases and files from.
