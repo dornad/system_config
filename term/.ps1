@@ -22,8 +22,8 @@ function parse_git_branch() {
 }
 
 function myip() {
-  ifconfig | grep "inet " | grep -v 127.0.0.1 | head -1 | cut -d\  -f2
+  ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 | xargs
 }
 
-export PS1="\n$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor \$(myip)\n"
+export PS1="\n$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor (\$(myip))\n"
 

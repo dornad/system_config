@@ -6,5 +6,14 @@ export ROO_OPTS="-Droo.bright=true"
 
 # 256m seems a good value to not run out of java heap space
 export ANT_OPTS="-Xmx512m  -Djava.awt.headless=true"
+export JAVA_OPTS="-Xmx512m  -Djava.awt.headless=true"
+
 # -Xms512M -Xmx512M
 
+# Tomcat related
+# Assuming tomcat was installed using brew
+# alias start_tomcat='sudo launchctl start org.tomcat6'
+# alias stop_tomcat='sudo launchctl stop org.tomcat6'
+
+# alias load_tomcat='sudo launchctl load /Library/LaunchDaemons/org.tomcat6.plist'
+# alias unload_tomcat='sudo launchctl unload /Library/LaunchDaemons/org.tomcat6.plist'
