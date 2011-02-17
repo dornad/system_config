@@ -14,24 +14,11 @@ export SVN_EDITOR="/usr/bin/vim"
 export EDITOR=/usr/bin/vim
 
 bash_folder="$HOME"
-if [ -e "$HOME/.bash_files/" ]; then
-  bash_folder="$HOME/.bash_files"
-fi
+[ -e "$HOME/.bash_files/" ] && bash_folder="$HOME/.bash_files"
 
-# General aliases
-source "$bash_folder"/.bash_aliases
-
-# Private aliases that don't need to be externalized for git
-source "$bash_folder"/.bash_aliases_mine
-
-# Language-specific configurations
-source "$bash_folder"/.bash_aliases_java
-source "$bash_folder"/.bash_aliases_rb
-source "$bash_folder"/.bash_aliases_py
-
-# Terminal prefs
-source "$bash_folder"/.ps1
-
-# App-specific stuff
-# source $bash_folder/.aws_config
+for f in "$bash_folder"/.bash_aliases* \
+         "$bash_folder"/.ps1 \
+         "$bash_folder"/.aws_config do
+    [ -e $f ] && echo "Sourcing alias file $f" && source "$f"
+done
 

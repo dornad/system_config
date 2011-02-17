@@ -14,8 +14,10 @@ NC='\e[0m' # No Color
     white='\['`tput sgr0; tput setaf 7`'\]'
    nocolor='\e[0m'
 
+bash_folder="$HOME"
+[ -e "$HOME/.bash_files/" ] && bash_folder="$HOME/.bash_files"
 
-source ~/.bash_files/.git-completion.sh
+[ -e "$bash_folder"/.git-completion.sh ] && source "$bash_folder"/.git-completion.sh
 
 function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
