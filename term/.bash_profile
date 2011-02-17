@@ -18,7 +18,7 @@ bash_folder="$HOME"
 
 for f in "$bash_folder"/.bash_aliases* \
          "$bash_folder"/.ps1 \
-         "$bash_folder"/.aws_config do
+         "$bash_folder"/.aws_config; do
     [ -e $f ] && echo "Sourcing alias file $f" && source "$f"
 done
 
