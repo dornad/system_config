@@ -27,5 +27,6 @@ function myip() {
   ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 | xargs
 }
 
-export PS1="\n$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor (\$(myip))\n"
+# I Iike to have ip, git and current timestamp in my commandline
+export PS1="\n$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor (\$(myip)) [\$(date +%Y%m%d-%H%M%S)]\n"
 
