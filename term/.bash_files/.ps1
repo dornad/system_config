@@ -28,5 +28,11 @@ function myip() {
 }
 
 # I Iike to have ip, git and current timestamp in my commandline
-export PS1="\n$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor (\$(myip)) [\$(date +%Y%m%d-%H%M%S)]\n"
+PS1="$green\u@\h $blue\w $red\$(__git_ps1 "%s") :$nocolor (\$(myip)) [\$(date +%Y%m%d-%H%M%S)]\n"
+# PS1="($VIRTUAL_ENV) $PS1"
+# PS1="\n$PS1"
+export PS1
 
+# export TERM="xterm-color"
+# alias ls="ls -G"
+# export PS1="\e[1;30m\][\e[\e[1;30m\]\e[1;33m\] \u@\H \[\e[1;32m\]\w\[\e[0m\] \e[1;30m\]]\n[\[ \e[1;31m\]\T\[\e[0m\]\e[1;30m\] ] &gt; \e[37m\]"
