@@ -9,6 +9,9 @@
 # So, remote .profile, create .bash_profile, and symlink .bashrc to .bash_profile
 #--------------------------------------------------------------------
 
+# If brew is installed, may need this for non-interactive shells
+# export PATH=$PATH:"/usr/local/bin:/usr/local/git/bin"
+
 # Editors for SCMs and such
 export SVN_EDITOR="/usr/bin/vim"
 export EDITOR=/usr/bin/vim
