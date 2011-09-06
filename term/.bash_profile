@@ -10,7 +10,12 @@
 #--------------------------------------------------------------------
 
 # If brew is installed, may need this for non-interactive shells
-# export PATH=$PATH:"/usr/local/bin:/usr/local/git/bin"
+if [[ "$PATH" == *usr/local/bin* ]];then
+    echo "/usr/local/bin is already in path. Ignoring this directive"
+else
+    export PATH=$PATH:"/usr/local/bin"
+fi
+
 
 # Editors for SCMs and such
 export SVN_EDITOR="/usr/bin/vim"
