@@ -10,4 +10,23 @@ export VERSIONER_PYTHON_PREFER_32_BIT=no
 # Virtualenv configuration, with virtualenvwrapper
 # See instructions in /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+ 
+# bash completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+     . `brew --prefix`/etc/bash_completion
+fi
+ 
+# Python 2.6.x
+alias mkve26='mkvirtualenv --no-site-packages --python=/usr/bin/python2.6'
+# Python 2.7.x
+alias mkve27='mkvirtualenv --no-site-packages --python=/usr/local/bin/python2.7'
+# alias mkveqt27='mkvirtualenv --python=/usr/local/bin/python2.7'
+# Python 3.2.x
+alias mkve3='mkvirtualenv --no-site-packages --python=/usr/local/Cellar/python3/3.2/bin/python3'
+ 
+# Ammend python path for Homebrew PyQt
+# export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
+export PIP_USE_MIRRORS=true

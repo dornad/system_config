@@ -2,14 +2,6 @@
 
 alias reload='source ~/.bash_profile'
 
-# Mysql-related. These only work if mysql is installed by brew
-alias mysqlstart='/usr/local/Cellar/mysql/5.1.46/share/mysql/mysql.server start'
-alias mysqlstop='/usr/local/Cellar/mysql/5.1.46/share/mysql/mysql.server stop'
-
-alias startpf='sudo launchctl start org.postfix.master'
-alias stopfp='sudo launchctl stop org.postfix.master'
-
-# alias drush='cd ~/Sites/d6 && php ~/Sites/d6/sites/all/modules/drush/drush.php'
 alias epochdate='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s"'
 alias ber='bundle exec ruby'
 
