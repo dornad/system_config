@@ -7,7 +7,9 @@ export ROO_OPTS="-Droo.bright=true"
 # 256m seems a good value to not run out of java heap space
 export ANT_OPTS="-Xmx512m  -Djava.awt.headless=true"
 # export JAVA_OPTS="-Xmx512m  -Djava.awt.headless=true"
-export JAVA_OPTS="-Xmx512m"
+
+# Set min, max heap space
+export JAVA_OPTS="-Xms512m -Xmx1024m"
 
 # Tomcat related
 # Assuming tomcat was installed using brew

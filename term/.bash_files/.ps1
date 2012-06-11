@@ -24,7 +24,7 @@ function parse_git_branch() {
 }
 
 function myip() {
-  ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 | xargs
+  ifconfig | grep "inet " | grep -v 127.0.0.1 | grep -v "\-\->" | cut -d\  -f2 | xargs
 }
 
 function extip() {
