@@ -1,5 +1,6 @@
 #------ JAVA-related (and everything using Java) -------
 export JAVA_HOME=/Library/Java/Home
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # ROO profile settings for term
 export ROO_OPTS="-Droo.bright=true"

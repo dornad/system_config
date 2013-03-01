@@ -1,0 +1,3 @@
+#---------- Google App Engine Related ----------
+export GAE_PATH="/usr/local/google_appengine"
+
