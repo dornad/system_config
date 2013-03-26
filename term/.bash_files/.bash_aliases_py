@@ -6,6 +6,7 @@
 # defaults write com.apple.versioner.python Version 2.6
 # export VERSIONER_PYTHON_PREFER_32_BIT=yes
 export VERSIONER_PYTHON_PREFER_32_BIT=no
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
 # Virtualenv configuration, with virtualenvwrapper
 # See instructions in /usr/local/bin/virtualenvwrapper.sh
