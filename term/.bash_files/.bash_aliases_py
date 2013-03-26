@@ -10,6 +10,10 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
 # Virtualenv configuration, with virtualenvwrapper
 # See instructions in /usr/local/bin/virtualenvwrapper.sh
+#   Note that as of Mt. Lion virtualenv and virtualenvwrapper
+#   get installed to /usr/loca/share/python
+#   So ensure that this path is added to /etc/paths.d, like:
+#   echo "/usr/local/share/python" >> /etc/paths.d/90-python
 export WORKON_HOME=$HOME/.virtualenvs
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
