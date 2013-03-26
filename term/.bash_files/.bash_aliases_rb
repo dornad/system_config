@@ -10,4 +10,6 @@ fi
 # rubyver=$(rvm use | cut -d \  -f 4)
 # export GEM_HOME=~/.gem/ruby/$rubyver/
 
-rvm use ruby-1.9.2-head
+if [ ! -z $(which rvm) ];then
+    rvm use ruby-1.9.2-head
+fi
