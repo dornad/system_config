@@ -10,10 +10,14 @@ export HISTTIMEFORMAT="%Y%m%d-%T "
 # Ignores repeated and uninteresting commands, also allows you to keep a 
 # command out of history by starting it with a space or a tab.
 export HISTIGNORE="&:pwd:ls:[bf]g:exit:[ \t]*"
-shopt -s cmdhist
-shopt -s histappend
+
+# Store common history to all terminal shells. This could be
+# bothersome, so think about it if you want it
+# shopt -s cmdhist
+# shopt -s histappend
+
 # Append history from all windows
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Define some colors
 red='\e[0;31m'

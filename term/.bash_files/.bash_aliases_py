@@ -5,7 +5,14 @@
 # On OSX, to set the default Python:
 # defaults write com.apple.versioner.python Version 2.6
 # export VERSIONER_PYTHON_PREFER_32_BIT=yes
-export VERSIONER_PYTHON_PREFER_32_BIT=no
+
+#--------------------------------------------------
+# Troubleshooting
+# * remove all virtualenvwrappers - 
+#   pip-2.X uninstall virtualenvwrapper 
+# * re-install virtualenvwrapper
+#   remember where the virtualenvwrapper.sh is (/usr/local or /usr/local/share/python)
+#--------------------------------------------------
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 
 # Virtualenv configuration, with virtualenvwrapper
@@ -37,3 +44,6 @@ alias mkve3='mkvirtualenv --no-site-packages --python=/usr/local/Cellar/python3/
 # Ammend python path for Homebrew PyQt
 # export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 export PIP_USE_MIRRORS=true
+
+# Some miscellaneous tools that might exist
+# export TM_RST2HTML=/Users/sundar/.virtualenvs/flask/bin/rst2html.py
