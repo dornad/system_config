@@ -6,3 +6,13 @@ and have ONLY .bash_profile in the root. That way everything is in
 a single place that you can manage easier.
 To accommodate this, if you have a ~/.bash_files folder, that's where 
 .bash_profile will load all the bash aliases and files from.
+
+## Installation
+
+    cd ~/Projects
+    git clone git@github.com:cybertoast/system_config.git
+
+    cp -ri system_config/term/.bash_profile ~/
+    cp -ri system_config/term/.bash_files ~/
+    cp -ri system_config/term/.gitconfig ~/
+
