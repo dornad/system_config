@@ -74,6 +74,7 @@
   # relstart = flow release start $(date -u +%Y%m%d%H%M%S)
   # relfinish = flow release finish 
   branchinfo = "!git show --summary `git merge-base --independent $1`"
+  up = "!git remote update -p; git merge --ff-only @{u}"
 
 [apply]
   # Warn about whitespace errors, and try to fix them
