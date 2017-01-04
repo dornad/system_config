@@ -10,6 +10,16 @@ fi
 # rubyver=$(rvm use | cut -d \  -f 4)
 # export GEM_HOME=~/.gem/ruby/$rubyver/
 
-if [ ! -z $(which rvm) ];then
-    rvm use ruby-1.9.2-head
-fi
+# if [ ! -z $(which rvm) ];then
+#    rvm use ruby-1.9.2-head
+# fi
+
+# nvm
+export NVM_DIR="/Users/drodriguez/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # this line loads nvm
+nvm use 4.1.1
+
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
